@@ -3,7 +3,9 @@
 1.  **You can use it either with docker or without it, In Docker version I have used nginx as a load balancer.**
 2.  **But for simplicity you can use normal setup which doesn't have nginx but you need to install mongodb and create account on cloudinary to api secrets.***
 
-### API Documentaion : [Click here](https://documenter.getpostman.com/view/31564556/2s9YsDkah7)
+### API Documentaion : [Click here](https://documenter.getpostman.com/view/31564556/2s9YsDkah7) 
+### API Documentation PDF Version : open apiq.pdf in directory
+
 ## Normal Setup
 -----------------------------------------
 
