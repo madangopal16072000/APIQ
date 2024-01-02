@@ -9,17 +9,21 @@ const path = require("path");
 const productRoutes = require("./routes/productRoutes");
 const userRoutes = require("./routes/userRoutes");
 const paymentRoutes = require("./routes/paymentRoutes");
-
+const mongoSanitize = require("express-mongo-sanitize");
 const orderRoutes = require("./routes/orderRoutes");
 const cors = require("cors");
-const corsOptions = require("./config/corsOptions");
 const app = express();
-const helmet = require("helmet");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors());
+
+app.use(
+  mongoSanitize({
+    replaceWith: "_",
+  })
+);
 
 app.get("/", (req, res) => {
   res.send("Welcome to my Instacart Api");
